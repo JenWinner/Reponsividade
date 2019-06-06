@@ -13,6 +13,11 @@ nav{
     align-items:center;
     justify-content: space-around;
 }
+nav a{
+    color: black;
+    font-family:'Pacifico', cursive;
+    font-size:30px;
+    }
 header{
     grid-area: header;
     background-color: blueviolet
@@ -29,6 +34,16 @@ footer{
     grid-area: footer;
     background-color: plum;
 }
+.Gretchen{
+    width: 200px;
+    height: 200px;
+    border-radius: center;
+}
+header, section, aside, div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 div {
     grid-area: div;
     background-color: royalblue;
@@ -40,7 +55,7 @@ nav img{
 @media(max-width:768px){
     body{
         grid-template-areas: 'navbar navbar navbar navbar'
-                             ' headre headre section section'
+                             ' header header section section'
                              ' aside aside div div'
                              'footer footer footer footer';
         grid-template-rows:   20vh 70vh 70vh 40vh;                   
@@ -56,14 +71,16 @@ nav img{
         width: 20px;
     }
 }
-@media(max-width:475px){
-    body[
+@media(max-width:425px){
+    body{
         grid-template-areas: 'navbar navbar navbar navbar'
                              ' header header header header'
                              ' section section section section'
                              'aside aside aside aside'
                              'div div div div'
                              'footer footer footer footer';
-                             grid-auto-rows: 20vh 50vh 50vh 50vh 40vh;
-    ]
+                             grid-template-rows: 20vh 50vh 50vh 50vh 40vh;
+    }   
 }
+
+
